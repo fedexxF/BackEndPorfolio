@@ -18,7 +18,7 @@ public class ExperienciaController {
         this.experienciaService = experienciaService;
     }
 
-    @PutMapping("/update")
+    @PostMapping("/update")
     public ResponseEntity<Experiencia> editarExperiencia(@RequestBody Experiencia experiencia){
         Experiencia updateExperiencia=experienciaService.editarExperiencia(experiencia);
         return new ResponseEntity<>(updateExperiencia, HttpStatus.OK);

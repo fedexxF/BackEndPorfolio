@@ -17,7 +17,7 @@ public class HabilidadController {
     public HabilidadController(HabilidadService habilidadService) {
         this.habilidadService = habilidadService;
     }
-    @PutMapping("/update")
+    @PostMapping("/update")
     public ResponseEntity<Habilidad> editarHabilidad(@RequestBody Habilidad habilidad){
         Habilidad updateHabilidad=habilidadService.editarHabilidad(habilidad);
         return new ResponseEntity<>(updateHabilidad, HttpStatus.OK);

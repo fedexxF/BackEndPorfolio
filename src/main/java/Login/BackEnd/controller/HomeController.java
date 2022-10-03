@@ -20,7 +20,7 @@ public class HomeController {
             this.homeService = homeService;
         }
 
-        @PutMapping("/update")
+        @PostMapping("/update")
         public ResponseEntity<Home> editarHome(@RequestBody Home home) {
             Home updateHome = homeService.editarHome(home);
             return new ResponseEntity<>(updateHome, HttpStatus.OK);

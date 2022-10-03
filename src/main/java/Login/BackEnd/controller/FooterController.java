@@ -17,7 +17,7 @@ public class FooterController {
         this.footerService = footerService;
     }
 
-    @PutMapping("/update")
+    @PostMapping("/update")
     public ResponseEntity<Footer> editarFooter(@RequestBody Footer footer){
         Footer updateFooter=footerService.editarFooter(footer);
         return new ResponseEntity<>(updateFooter, HttpStatus.OK);

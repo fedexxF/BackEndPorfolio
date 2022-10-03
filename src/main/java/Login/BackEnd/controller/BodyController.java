@@ -19,7 +19,7 @@ public class BodyController {
         this.bodyService = bodyService;
     }
 
-    @PutMapping("/update")
+    @PostMapping ("/update")
     public ResponseEntity<Body> editarBody(@RequestBody Body body) {
         Body updateBody = bodyService.editarBody(body);
         return new ResponseEntity<>(updateBody, HttpStatus.OK);

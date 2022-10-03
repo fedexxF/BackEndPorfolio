@@ -20,7 +20,7 @@ public class ProyectosController {
         this.proyectosService = proyectosService;
     }
 
-    @PutMapping("/update")
+    @PostMapping("/update")
         public ResponseEntity<Proyectos> editarProyectos(@RequestBody Proyectos proyectos){
             Proyectos updateProyectos=proyectosService.editarProyectos(proyectos);
             return new ResponseEntity<>(updateProyectos, HttpStatus.OK);
